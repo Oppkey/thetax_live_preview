@@ -1,0 +1,17 @@
+name: theta
+description: RICOH THETA WebAPI interface
+version: 0.0.1
+homepage: https://community.theta360.guide/t/dart-library-for-ricoh-theta-live-preview-testing/7312?u=craig
+
+environment:
+  sdk: '>=2.14.0 <3.0.0'
+
+
+dependencies:
+  dio: ^4.0.0
+#   path: ^1.8.0
+  http: ^0.13.3
+
+dev_dependencies:
+  lints: ^1.0.0
+  test: ^1.16.0
