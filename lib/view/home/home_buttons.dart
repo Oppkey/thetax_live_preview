@@ -55,7 +55,7 @@ class HomeButtons extends StatelessWidget {
                       .controller);
         },
         iconSize: 40.0,
-        icon: Icon(Icons.play_circle_outlined),
+        icon: const Icon(Icons.play_circle_outlined),
       ),
       IconButton(
           onPressed: () {
