@@ -49,6 +49,13 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^1.0.0
+  msix: ^3.16.4
+
+msix_config:
+  display_name: THETA Live Preview Demo
+  publisher_display_name: Oppkey
+  msix_version: 0.1.0.0
+  logo_path: C:\Users\craig\Pictures\theta\community_logo.png
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
