@@ -33,8 +33,8 @@ class FileScreen extends StatelessWidget {
           )
         ],
       ),
-      body: Column(
-        children: const [
+      body: const Column(
+        children: [
           FileResponse(),
           FileButtons(),
         ],

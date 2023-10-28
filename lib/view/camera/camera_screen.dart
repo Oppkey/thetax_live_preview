@@ -9,11 +9,11 @@ class CameraScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Camera manager'),
         backgroundColor: Colors.lightGreen,
-        actions: [
+        actions: const [
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
+            children: [
               SizedBox(
                 width: 30,
               ),
@@ -21,8 +21,8 @@ class CameraScreen extends StatelessWidget {
           )
         ],
       ),
-      body: Column(
-        children: const [],
+      body: const Column(
+        children: [],
       ),
     );
   }

@@ -71,8 +71,8 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: context.watch<LayoutNotifier>().landscape
-          ? Row(
-              children: const [
+          ? const Row(
+              children: [
                 HomeButtons(
                   flex: 1,
                   row: false,
@@ -80,8 +80,8 @@ class HomeScreen extends StatelessWidget {
                 HomeResponse(flex: 6),
               ],
             )
-          : Column(
-              children: const [
+          : const Column(
+              children: [
                 HomeResponse(flex: 8),
                 HomeButtons(flex: 1),
               ],
