@@ -6,6 +6,10 @@ Demonstration of using RICOH THETA API with Flutter
 
 [Longer demonstration showing latency](https://youtu.be/8YXY8XcQNnM).
 
+Windows WiFi must be connected to THETA X.
+
+![windows wifi](docs/images/wifi_connect.png)
+
 ---
 
 ## development
