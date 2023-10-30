@@ -6,6 +6,12 @@ Demonstration of using RICOH THETA API with Flutter
 
 [Longer demonstration showing latency](https://youtu.be/8YXY8XcQNnM).
 
+## Usage
+
+I built a Windows desktop.
+
+https://github.com/Oppkey/thetax_live_preview/releases/tag/v0.1.0.0
+
 Windows WiFi must be connected to THETA X.
 
 ![windows wifi](docs/images/wifi_connect.png)
