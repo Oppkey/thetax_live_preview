@@ -6,10 +6,8 @@ import 'package:provider/provider.dart';
 import 'package:theta/theta.dart';
 
 class HomeButtons extends StatelessWidget {
-  final int flex;
   final bool row;
   const HomeButtons({
-    required this.flex,
     this.row = true,
     Key? key,
   }) : super(key: key);
@@ -65,17 +63,14 @@ class HomeButtons extends StatelessWidget {
           iconSize: 40.0,
           icon: const Icon(Icons.stop_circle_outlined))
     ];
-    return Expanded(
-      flex: flex,
-      child: row
-          ? Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: buttons,
-            )
-          : Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: buttons,
-            ),
-    );
+    return row
+        ? Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: buttons,
+          )
+        : Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: buttons,
+          );
   }
 }

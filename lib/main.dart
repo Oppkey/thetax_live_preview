@@ -3,6 +3,7 @@ import 'package:thetax_mjpeg/model/file_notifier.dart';
 import 'package:thetax_mjpeg/model/layout_notifier.dart';
 import 'package:thetax_mjpeg/model/response_notifier.dart';
 import 'package:thetax_mjpeg/model/video_notifier.dart';
+import 'package:thetax_mjpeg/model/vr_notifier.dart';
 import 'package:thetax_mjpeg/view/camera/camera_screen.dart';
 import 'package:thetax_mjpeg/view/file/file_screen.dart';
 import 'package:provider/provider.dart';
@@ -16,6 +17,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => ResponseNotifier()),
         ChangeNotifierProvider(create: (_) => VideoNotifier()),
         ChangeNotifierProvider(create: (_) => LayoutNotifier()),
+        ChangeNotifierProvider(create: (_) => VrNotifier()),
         ChangeNotifierProvider(create: (_) => FileNotifier()),
       ],
       child: const MainApp(),
