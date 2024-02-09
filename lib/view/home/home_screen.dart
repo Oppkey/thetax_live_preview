@@ -61,9 +61,7 @@ class HomeScreen extends StatelessWidget {
                     Preview.stopPreview();
                     Provider.of<VrNotifier>(context, listen: false).toggleVr();
                   },
-                  child: Text(context.watch<VrNotifier>().vr
-                      ? 'equirectangular'
-                      : '360')),
+                  child: Text(context.watch<VrNotifier>().vr ? 'rect' : '360')),
 
               // const Text('sc2 experiment'),
               // Switch(
@@ -81,10 +79,12 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: context.watch<LayoutNotifier>().landscape
-          ? const Stack(
+          ? Stack(
               children: [
-                HomeResponse(),
-                HomeButtons(
+                Container(
+                    alignment: Alignment.centerRight,
+                    child: const HomeResponse()),
+                const HomeButtons(
                   row: false,
                 ),
               ],

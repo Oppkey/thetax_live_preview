@@ -13,12 +13,9 @@ class HomeResponse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return context.watch<VideoNotifier>().videoRunning
-        ? Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: LivePreview(
-              context.watch<VideoNotifier>().controller,
-              is360: context.watch<VrNotifier>().vr,
-            ),
+        ? LivePreview(
+            context.watch<VideoNotifier>().controller,
+            is360: context.watch<VrNotifier>().vr,
           )
         : Text(context.watch<ResponseNotifier>().responseText);
   }
