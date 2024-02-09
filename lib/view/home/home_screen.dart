@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:thetax_mjpeg/model/layout_notifier.dart';
 import 'package:thetax_mjpeg/model/video_notifier.dart';
 import 'package:theta/theta.dart';
+import 'package:thetax_mjpeg/model/vr_notifier.dart';
 
 import 'home_buttons.dart';
 import 'home_response.dart';
@@ -16,7 +17,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('THETA X Live Preview'),
+        title: const Text('RICOH THETA Live Preview'),
         backgroundColor: Colors.lightGreen,
         actions: [
           Row(
@@ -54,6 +55,15 @@ class HomeScreen extends StatelessWidget {
                   child: Text(context.watch<LayoutNotifier>().landscape
                       ? 'portait'
                       : 'landscape')),
+              TextButton(
+                  onPressed: () {
+                    context.read<VideoNotifier>().setVideoRunning(false);
+                    Preview.stopPreview();
+                    Provider.of<VrNotifier>(context, listen: false).toggleVr();
+                  },
+                  child: Text(context.watch<VrNotifier>().vr
+                      ? 'equirectangular'
+                      : '360')),
 
               // const Text('sc2 experiment'),
               // Switch(
@@ -71,19 +81,18 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: context.watch<LayoutNotifier>().landscape
-          ? const Row(
+          ? const Stack(
               children: [
+                HomeResponse(),
                 HomeButtons(
-                  flex: 1,
                   row: false,
                 ),
-                HomeResponse(flex: 6),
               ],
             )
-          : const Column(
+          : const Stack(
               children: [
-                HomeResponse(flex: 8),
-                HomeButtons(flex: 1),
+                HomeResponse(),
+                HomeButtons(),
               ],
             ),
     );
